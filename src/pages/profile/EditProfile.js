@@ -55,11 +55,11 @@ const EditProfile = () => {
         const image = new FormData();
         image.append("file", profileImage);
         image.append("cloud_name", "dwdj5p7yy");
-        image.append("upload_preset", "wk66xdkq");
+        image.append("upload_preset", "viqakqwe");
 
         // First save image to cloudinary
         const response = await fetch(
-          "https://api.cloudinary.com/v1_1/virahul77/image/upload",
+          "https://api.cloudinary.com/v1_1/dwdj5p7yy/image/upload",
           { method: "post", body: image }
         );
         const imgData = await response.json();
@@ -80,7 +80,7 @@ const EditProfile = () => {
         setIsLoading(false);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setIsLoading(false);
       toast.error(error.message);
     }
